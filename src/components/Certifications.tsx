@@ -14,7 +14,7 @@ export function Certifications() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
-            <Card key={index} className="border-border bg-secondary hover:shadow-xl hover:shadow-accent/10 transition-shadow">
+            <Card key={index} className="border-border bg-secondary transition-all duration-300 hover:shadow-xl hover:shadow-accent/10 hover:border-accent/50">
               <CardContent className="p-6">
                   <div className="flex items-center gap-4">
                       <Award className="h-8 w-8 flex-shrink-0 text-accent" />

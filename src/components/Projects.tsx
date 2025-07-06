@@ -15,7 +15,7 @@ export function Projects() {
         <h2 className="mb-12 text-center text-3xl font-bold font-headline text-primary">Projects</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <Card key={project.title} className="flex flex-col overflow-hidden border-border bg-background transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-accent/10">
+            <Card key={project.title} className="flex flex-col overflow-hidden border-border bg-background transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-accent/10 hover:border-accent/50">
               <CardHeader className="p-0">
                  <Image
                     src={project.imageUrl}

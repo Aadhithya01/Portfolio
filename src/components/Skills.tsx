@@ -1,6 +1,7 @@
 import { portfolioData } from '@/data/portfolio-data';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Code, Wrench, Users, Lightbulb } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const skillSections = [
   {
@@ -34,7 +35,7 @@ export function Skills() {
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {skillSections.map((section) => (
-            <Card key={section.title} className="shadow-lg bg-background">
+            <Card key={section.title} className="bg-background transition-shadow duration-300 hover:shadow-xl hover:shadow-accent/10">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 font-headline">
                   {section.icon}
@@ -44,12 +45,9 @@ export function Skills() {
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {section.skills.map((skill) => (
-                    <div
-                      key={skill}
-                      className="rounded-full bg-secondary px-3 py-1 text-sm font-medium"
-                    >
+                    <Badge key={skill} variant="secondary">
                       {skill}
-                    </div>
+                    </Badge>
                   ))}
                 </div>
               </CardContent>

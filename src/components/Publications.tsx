@@ -18,7 +18,7 @@ export function Publications() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {publications.map((pub, index) => (
-            <Card key={index} className="border-border bg-background hover:shadow-xl hover:shadow-accent/10 transition-shadow">
+            <Card key={index} className="border-border bg-background transition-all duration-300 hover:shadow-xl hover:shadow-accent/10 hover:border-accent/50">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                     <BookOpen className="h-8 w-8 flex-shrink-0 text-accent" />

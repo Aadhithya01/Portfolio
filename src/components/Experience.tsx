@@ -15,9 +15,9 @@ export function Experience() {
         <div className="relative max-w-3xl mx-auto">
           <div className="absolute left-4 top-0 h-full w-0.5 bg-border -translate-x-1/2"></div>
           {experience.map((job, index) => (
-            <div key={index} className="relative pl-12 pb-12">
-              <div className="absolute left-4 top-1 h-4 w-4 rounded-full bg-primary -translate-x-1/2"></div>
-              <Card className="border-border bg-secondary hover:shadow-xl hover:shadow-accent/10 transition-shadow">
+            <div key={index} className="group relative pl-12 pb-12">
+              <div className="absolute left-4 top-1 h-4 w-4 rounded-full bg-accent -translate-x-1/2 transition-transform duration-200 group-hover:scale-125"></div>
+              <Card className="border-border bg-secondary transition-all duration-300 hover:shadow-xl hover:shadow-accent/10 hover:border-accent/50">
                 <CardHeader>
                     <div>
                       <CardTitle className="font-headline text-xl text-primary">{job.role}</CardTitle>
