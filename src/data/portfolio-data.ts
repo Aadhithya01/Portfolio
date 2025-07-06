@@ -2,6 +2,8 @@
 export const portfolioData = {
   name: "Aadhithya R",
   role: "AI Engineer",
+  avatarUrl: "https://placehold.co/128x128.png",
+  avatarHint: "man portrait",
   contact: {
     email: "aadhithyaraja180@gmail.com",
     github: "https://github.com/Aadhithya01",
@@ -10,18 +12,14 @@ export const portfolioData = {
   resumeUrl: "/Aadhithya-Resume.pdf",
   navLinks: [
     { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Education', href: '#education' },
     { name: 'Certifications', href: '#certifications' },
+    { name: 'Publications', href: '#publications' },
   ],
   about: {
-    experienceSnippets: [
-      "Developed an AI chat-bot designed to assist users with tax filing processes in the US. Integrated conversational retrieval memory to maintain context and provide personalized assistance, enhancing overall user experience and operational efficiency.",
-      "Drastically reduced the time from manual data entry by implementing AWS Textract to extract data from multi-page PDFs and automatically populate an Excel template. Created an API endpoint using FastAPI, then dockerized it and provided the endpoint to be hosted on a server.",
-      "Conducted time series analysis to forecast next month’s website traffic using historical data, thereby optimizing operational planning and resource allocation."
-    ]
+    summary: "Hi, I’m Aadhithya R, an AI Engineer passionate about building intelligent, scalable, and high-performance AI solutions."
   },
   skills: {
     languages: ["Python", "R", "SQL"],
@@ -101,5 +99,9 @@ export const portfolioData = {
     { title: 'Representative (2020-2024)', provider: 'Easwari Rotaract Community' },
     { title: 'Lead (2022-2024)', provider: 'College Coding Club' },
     { title: 'Events Lead (2023-2024)', provider: 'Department Symposium' },
+  ],
+  publications: [
+      { title: 'How to create a legend for a contour plot in matplotlib', source: 'Codespeedy' },
+      { title: 'Generate secure random string using Secrets module in Python', source: 'Codespeedy' }
   ]
 };

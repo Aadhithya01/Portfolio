@@ -1,45 +1,40 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { portfolioData } from '@/data/portfolio-data';
-import { Briefcase, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 export function Experience() {
   const { experience } = portfolioData;
 
   return (
-    <section id="experience" className="py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold font-headline">
-          Work Experience
-        </h2>
-        <div className="relative max-w-2xl mx-auto">
-          <div className="absolute left-3 top-0 h-full w-0.5 bg-border"></div>
-          {experience.map((job, index) => (
-            <div key={index} className="relative pl-10 pb-12">
-              <div className="absolute left-0 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary">
-                <Briefcase className="h-4 w-4 text-primary-foreground" />
+    <section id="experience" className="space-y-6">
+      <h2 className="text-3xl font-bold font-headline text-primary">
+        Work Experience
+      </h2>
+      <div className="space-y-8">
+        {experience.map((job, index) => (
+          <Card key={index} className="border-border bg-secondary hover:shadow-xl hover:shadow-accent/10 transition-shadow">
+            <CardHeader>
+              <div className="flex items-start justify-between">
+                <div>
+                  <CardTitle className="font-headline text-xl text-primary">{job.role}</CardTitle>
+                  <CardDescription className="text-base">{job.company}</CardDescription>
+                </div>
+                <div className="text-sm text-muted-foreground">{job.duration}</div>
               </div>
-              <Card className="shadow-lg">
-                <CardHeader>
-                  <CardTitle className="font-headline">{job.role}</CardTitle>
-                  <p className="text-muted-foreground">
-                    <span className="font-semibold text-primary">{job.company}</span> | {job.duration}
-                  </p>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {job.responsibilities.map((resp, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <Check className="mt-1 h-4 w-4 flex-shrink-0 text-accent" />
-                        <span>{resp}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          ))}
-        </div>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-3 text-muted-foreground">
+                {job.responsibilities.map((resp, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <Check className="mt-1 h-4 w-4 flex-shrink-0 text-accent" />
+                    <span>{resp}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </section>
   );
