@@ -1,6 +1,6 @@
 export const portfolioData = {
   name: "Aadhithya",
-  role: "AI & Full-Stack Developer",
+  role: "AI Developer",
   contact: {
     email: "aadhithya@example.com",
     github: "https://github.com/aadhithya",
