@@ -1,10 +1,11 @@
+
 export const portfolioData = {
-  name: "Aadhithya",
-  role: "AI Developer",
+  name: "Aadhithya R",
+  role: "AI Engineer",
   contact: {
-    email: "aadhithya@example.com",
-    github: "https://github.com/aadhithya",
-    linkedin: "https://linkedin.com/in/aadhithya",
+    email: "aadhithyaraja180@gmail.com",
+    github: "https://github.com/Aadhithya01",
+    linkedin: "https://linkedin.com/in/aadhithyar",
   },
   resumeUrl: "/Aadhithya-Resume.pdf",
   navLinks: [
@@ -17,106 +18,66 @@ export const portfolioData = {
   ],
   about: {
     experienceSnippets: [
-      "Developed and deployed scalable web applications using React, Node.js, and Python, focusing on creating robust and user-friendly solutions.",
-      "Led a cross-functional team of developers in an agile environment, successfully improving project delivery timelines by over 20% through optimized workflows and clear communication.",
-      "Architected and implemented a resilient microservices-based system, which significantly enhanced system resilience, fault tolerance, and scalability.",
-      "Integrated advanced machine learning models into production systems to provide highly personalized user experiences and drive user engagement.",
-      "Engineered CI/CD pipelines for multiple projects, automating the build, test, and deployment process to ensure higher code quality and faster release cycles."
+      "Proactive AI Engineer building smart, scalable, and cloud-native AI systems using modern open-source tools.",
+      "Experienced in developing LLM-powered solutions, machine learning workflows, and automated data extraction pipelines.",
+      "Passionate about driving business impact through intelligent automation while staying current with the latest in generative AI and open-source innovation.",
+      "Designed a production-grade chatbot using Flowise to handle 1,000+ daily user queries related to tax filing, reducing customer support load by 65%.",
+      "Developed a pipeline with Tesseract OCR to extract structured data from tax forms, reducing manual data entry workload by up to 80%.",
+      "Built and deployed 10+ RESTful APIs to automate tasks like validation, formatting, and data generation."
     ]
   },
   skills: {
-    languages: ["JavaScript", "Python", "TypeScript", "Java", "SQL"],
-    frameworks: ["React", "Next.js", "Node.js", "Express.js", "Django", "Flask"],
-    tools: ["Docker", "Kubernetes", "Git", "Jenkins", "AWS", "Terraform"],
-    softSkills: ["Team Leadership", "Agile Methodologies", "Problem Solving", "Strategic Planning", "Public Speaking"]
+    languages: ["Python", "JavaScript", "SQL"],
+    frameworks: ["Next.js", "Streamlit", "Flowise"],
+    tools: ["Docker", "Tesseract OCR", "Langfuse", "FAISS", "Google AI", "OpenAI", "Git"],
+    softSkills: ["Proactive Communication", "Scalable System Design", "Intelligent Automation", "Agile Methodologies"]
   },
   projects: [
     {
-      title: "AI Portfolio Generator",
-      description: "A web application that dynamically generates a professional portfolio from a user's resume data using generative AI for summaries and content structuring.",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Genkit AI", "Vercel"],
-      impact: "Automated the portfolio creation process, reducing the time required from hours to minutes and enabling users to create professional sites with no coding.",
-      link: "https://github.com/aadhithya/ai-portfolio",
+      title: "Chat with PDFs",
+      description: "Engineered an interactive web app using Python and Streamlit that allows users to query PDF documents in natural language. Integrated open-source Google's Generative AI and FAISS for similarity-based search, delivering 90% accuracy.",
+      tech: ["Python", "Streamlit", "Google Generative AI", "FAISS"],
+      link: "https://github.com/Aadhithya01",
       imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "abstract code"
+      imageHint: "document chat"
     },
     {
-      title: "Real-time Collaborative Whiteboard",
-      description: "A web-based whiteboard application that allows multiple users to collaborate in real-time, featuring drawing tools, text, and shape support.",
-      tech: ["React", "Node.js", "WebSocket", "Canvas API", "Redis"],
-      impact: "Enabled seamless remote collaboration for teams, resulting in a 30% increase in productivity for brainstorming sessions during user testing.",
-      link: "https://github.com/aadhithya/collaborative-whiteboard",
+      title: "Voiceover GPT Bot",
+      description: "Built a voice-activated assistant powered by OpenAI's GPT-3.5-turbo for hands-free use cases. Combined Google Speech Recognition with pyttsx3 for real-time speech-to-text and natural-sounding voice replies.",
+      tech: ["Python", "OpenAI GPT-3.5", "Google Speech Recognition", "pyttsx3"],
+      link: "https://github.com/Aadhithya01",
       imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "team collaboration"
-    },
-    {
-      title: "E-commerce Recommendation Engine",
-      description: "A machine learning model integrated into an e-commerce platform to provide personalized product recommendations based on user behavior.",
-      tech: ["Python", "scikit-learn", "Pandas", "Flask", "REST API"],
-      impact: "Increased average order value by 15% and improved customer engagement by personalizing the shopping experience.",
-      link: "https://github.com/aadhithya/recommendation-engine",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "online shopping"
+      imageHint: "voice assistant"
     }
   ],
   experience: [
     {
-      role: "Senior Software Engineer",
-      company: "Tech Innovations Inc.",
-      duration: "Jan 2021 - Present",
+      role: "AI Engineer",
+      company: "Span Technology",
+      duration: "Jan 2024 - Present",
       responsibilities: [
-        "Led the development of a new AI-driven analytics platform, serving over 10,000 daily active users.",
-        "Mentored a team of 5 junior developers, fostering their growth and ensuring high-quality code through rigorous reviews.",
-        "Collaborated with product managers and designers to translate complex requirements into functional, high-performance features."
-      ]
-    },
-    {
-      role: "Software Engineer",
-      company: "Digital Solutions Co.",
-      duration: "Jun 2018 - Dec 2020",
-      responsibilities: [
-        "Developed and maintained full-stack features for a large-scale enterprise SaaS application.",
-        "Contributed to a 25% reduction in page load times by optimizing front-end performance and refactoring legacy code.",
-        "Participated in the complete software development lifecycle, from requirements gathering to deployment and maintenance."
-      ]
-    },
-    {
-      role: "Software Engineer Intern",
-      company: "Code Crafters",
-      duration: "May 2017 - Aug 2017",
-      responsibilities: [
-        "Assisted the development team in building new features for a client-facing web application.",
-        "Wrote unit and integration tests to ensure code quality and reliability.",
-        "Gained hands-on experience with agile development practices and version control systems."
+        "Designed a production-grade chatbot using Flowise to handle 1,000+ daily user queries related to tax filing, reducing customer support load by 65%.",
+        "Integrated a live agent fallback system using open-source tools, improving overall response flow by 30%.",
+        "Developed a pipeline with Tesseract OCR to extract structured data from W9, W8, and 1095-C forms, reducing manual data entry by up to 80%.",
+        "Dockerized and hosted open-source tools such as Langfuse, Flowise, and Zammad for internal and production systems.",
+        "Built and deployed 10+ RESTful APIs for automation tasks including data validation, formatting, and sentiment analysis."
       ]
     }
   ],
   education: [
     {
-      degree: "Master of Science in Computer Science",
-      institution: "University of Technology",
-      duration: "2018 - 2020",
-      score: "GPA: 3.9/4.0"
+      degree: "Bachelor of Computer Science & Engineering",
+      institution: "Easwari Engineering College",
+      duration: "2020 - 2024",
+      score: "CGPA: 9.5 / 10.0"
     },
     {
-      degree: "Bachelor of Science in Software Engineering",
-      institution: "State University",
-      duration: "2014 - 2018",
-      score: "Summa Cum Laude"
+      degree: "Higher Secondary Education",
+      institution: "SRV Matriculation Hr. Sec. School",
+      duration: "2019 - 2020",
+      score: "Percentage: 84%"
     }
   ],
   certifications: [
-    {
-      title: "AWS Certified Solutions Architect - Associate",
-      provider: "Amazon Web Services"
-    },
-    {
-      title: "Certified Kubernetes Application Developer (CKAD)",
-      provider: "The Linux Foundation"
-    },
-    {
-      title: "Professional Scrum Master I (PSM I)",
-      provider: "Scrum.org"
-    }
   ]
 };
