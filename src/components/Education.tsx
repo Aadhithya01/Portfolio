@@ -6,7 +6,7 @@ export function Education() {
   const { education } = portfolioData;
 
   return (
-    <section id="education" className="py-20">
+    <section id="education" className="py-12">
       <div className="container mx-auto px-4">
         <h2 className="mb-12 text-center text-3xl font-bold font-headline text-primary">Education</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-4xl mx-auto">

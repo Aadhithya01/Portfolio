@@ -11,7 +11,7 @@ export function Publications() {
   }
 
   return (
-    <section id="publications" className="py-20 bg-secondary">
+    <section id="publications" className="py-12 bg-secondary">
       <div className="container mx-auto px-4">
         <h2 className="mb-12 text-center text-3xl font-bold font-headline text-primary">
           Publications

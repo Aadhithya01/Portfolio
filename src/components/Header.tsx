@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { portfolioData } from '@/data/portfolio-data';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Download } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 export function Header() {
   return (
@@ -48,26 +48,10 @@ export function Header() {
                       {link.name}
                     </Link>
                   ))}
-                  <a
-                    href={portfolioData.resumeUrl}
-                    download
-                    className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 mt-4"
-                  >
-                    <Download className="mr-2 h-4 w-4" />
-                    Download Resume
-                  </a>
                 </div>
               </SheetContent>
             </Sheet>
           </div>
-          <a
-            href={portfolioData.resumeUrl}
-            download
-            className="hidden md:inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
-          >
-            <Download className="mr-2 h-4 w-4" />
-            Download Resume
-          </a>
         </div>
       </div>
     </header>

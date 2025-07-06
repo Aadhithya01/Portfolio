@@ -7,7 +7,7 @@ export function Certifications() {
   const { certifications } = portfolioData;
 
   return (
-    <section id="certifications" className="py-20">
+    <section id="certifications" className="py-12">
       <div className="container mx-auto px-4">
         <h2 className="mb-12 text-center text-3xl font-bold font-headline text-primary">
           Certifications

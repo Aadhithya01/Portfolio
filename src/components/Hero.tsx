@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { portfolioData } from '@/data/portfolio-data';
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Hero() {
@@ -11,8 +11,8 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="flex items-center py-20 text-center">
-      <div className="container mx-auto px-4">
+    <section id="home" className="flex items-center py-12 text-center">
+      <div className="container mx-auto flex flex-col items-center px-4">
         <Image
             src={portfolioData.avatarUrl}
             alt={portfolioData.name}
@@ -27,6 +27,14 @@ export function Hero() {
         <p className="mb-6 text-lg text-muted-foreground sm:text-xl md:text-2xl font-headline">
           {portfolioData.role}
         </p>
+        
+        <Button asChild size="lg" className="mb-8">
+            <a href={portfolioData.resumeUrl} download>
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+            </a>
+        </Button>
+        
         <div className="flex justify-center gap-4">
           {Object.entries(portfolioData.contact).map(([key, value]) => (
             <Button asChild variant="ghost" size="icon" key={key}>
