@@ -18,7 +18,6 @@ export const portfolioData = {
   ],
   about: {
     experienceSnippets: [
-      "Hi, I’m Aadhithya R, an AI Engineer passionate about building intelligent, scalable, and high-performance AI solutions.",
       "Developed an AI chat-bot designed to assist users with tax filing processes in the US. Integrated conversational retrieval memory to maintain context and provide personalized assistance, enhancing overall user experience and operational efficiency.",
       "Drastically reduced the time from manual data entry by implementing AWS Textract to extract data from multi-page PDFs and automatically populate an Excel template. Created an API endpoint using FastAPI, then dockerized it and provided the endpoint to be hosted on a server.",
       "Conducted time series analysis to forecast next month’s website traffic using historical data, thereby optimizing operational planning and resource allocation."

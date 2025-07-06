@@ -1,12 +1,8 @@
-import { summarizeExperience } from '@/ai/flows/summarize-experience';
-import { portfolioData } from '@/data/portfolio-data';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { User } from 'lucide-react';
 
-export async function About() {
-  const { summary } = await summarizeExperience({ 
-    experienceSnippets: portfolioData.about.experienceSnippets 
-  });
+export function About() {
+  const summary = "Hi, I’m Aadhithya R, an AI Engineer passionate about building intelligent, scalable, and high-performance AI solutions.";
 
   return (
     <section id="about" className="py-20 bg-secondary">
