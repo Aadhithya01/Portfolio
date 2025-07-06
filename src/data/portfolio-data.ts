@@ -16,6 +16,7 @@ export const portfolioData = {
     { name: 'Projects', href: '#projects' },
     { name: 'Education', href: '#education' },
     { name: 'Certifications', href: '#certifications' },
+    { name: 'Leadership', href: '#leadership' },
     { name: 'Publications', href: '#publications' },
   ],
   about: {
@@ -96,6 +97,8 @@ export const portfolioData = {
     { title: 'Build your own Chatbot', provider: 'NPTEL' },
     { title: 'Data analytics with python', provider: 'NPTEL' },
     { title: 'AWS Educate Certification', provider: 'AWS' },
+  ],
+  leadership: [
     { title: 'Representative (2020-2024)', provider: 'Easwari Rotaract Community' },
     { title: 'Lead (2022-2024)', provider: 'College Coding Club' },
     { title: 'Events Lead (2023-2024)', provider: 'Department Symposium' },
