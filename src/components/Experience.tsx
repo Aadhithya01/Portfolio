@@ -30,7 +30,7 @@ export function Experience() {
                     {job.responsibilities.map((resp, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <Check className="mt-1 h-4 w-4 flex-shrink-0 text-accent" />
-                        <span>{resp}</span>
+                        <span className="text-justify">{resp}</span>
                       </li>
                     ))}
                   </ul>

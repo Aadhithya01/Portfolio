@@ -19,7 +19,7 @@ export function Projects() {
                 <CardTitle className="font-headline text-primary">{project.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow space-y-4">
-                <p className="text-muted-foreground text-sm">{project.description}</p>
+                <p className="text-muted-foreground text-sm text-justify">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <Badge key={tech} variant="outline">{tech}</Badge>
