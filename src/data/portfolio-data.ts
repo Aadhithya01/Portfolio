@@ -19,7 +19,7 @@ export const portfolioData = {
     { name: 'Certifications', href: '#certifications' },
   ],
   about: {
-    summary: "Hi, I’m Aadhithya R, an AI Engineer passionate about building intelligent, scalable, and high-performance AI solutions."
+    summary: "Proactive AI Engineer building smart, scalable, and cloud-native AI systems using modern open-source tools. Experienced in developing LLM-powered solutions, machine learning workflows, and automated data extraction pipelines. Passionate about driving business impact through intelligent automation while staying current with the latest in generative AI and open-source innovation"
   },
   skills: {
     languages: ["Python", "R", "SQL"],
