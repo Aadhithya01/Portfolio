@@ -49,7 +49,7 @@ export const portfolioData = {
   ],
   experience: [
     {
-      role: "AI Engineer (Intern Trainee)",
+      role: "Junior AI Engineer",
       company: "SPAN Technology Services Private Ltd",
       duration: "Jan 2024 - Present",
       responsibilities: [
