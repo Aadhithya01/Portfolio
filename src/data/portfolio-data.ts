@@ -14,6 +14,7 @@ export const portfolioData = {
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Skills', href: '#skills' },
     { name: 'Education', href: '#education' },
     { name: 'Certifications', href: '#certifications' },
   ],
@@ -32,24 +33,18 @@ export const portfolioData = {
       description: "Engineered a web application using Python and Streamlit, enabling users to interactively ask questions about uploaded PDF files, reducing document analysis time by 50%. Implemented Google’s Generative AI for natural language understanding and FAISS for efficient similarity search, facilitating intelligent question-answering based on PDF content with 90% accuracy. Optimized user experience by ensuring quick and accurate responses, improving user satisfaction ratings by 40%.",
       tech: ["Python", "Streamlit", "Google Generative AI", "FAISS"],
       link: "https://github.com/Aadhithya01",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "document chat"
     },
     {
       title: "Voiceover GPT Bot",
       description: "Created an interactive voice-activated assistant leveraging OpenAI’s GPT-3.5-turbo model to provide intelligent and context-aware responses, increasing response relevance by 60%. Utilized Google Speech Recognition for accurate speech-to-text conversion and pyttsx3 for natural text-to-speech functionality, delivering a seamless real-time user interaction experience with 95% speech recognition accuracy. Enhanced accessibility and user engagement by enabling hands-free communication, boosting user interaction by 35%.",
       tech: ["Python", "OpenAI GPT-3.5", "Google Speech Recognition", "pyttsx3"],
       link: "https://github.com/Aadhithya01",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "voice assistant"
     },
     {
       title: "Assignment Generator",
       description: "Developed a comprehensive tool for web scraping and text processing, extracting and rephrasing Wikipedia content using OpenAI’s GPT-3.5-turbo model, increasing content generation efficiency by 70%. Integrated Selenium for automated web browsing and BeautifulSoup for efficient HTML parsing, ensuring accurate content retrieval with a 95% success rate. Leveraged Requests for HTTP requests and included features to save rephrased text into files, facilitating easy content extraction and transformation for academic and research purposes, reducing manual effort by 60%.",
       tech: ["Python", "OpenAI GPT-3.5", "Selenium", "BeautifulSoup"],
       link: "https://github.com/Aadhithya01",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "web scraping automation"
     }
   ],
   experience: [
@@ -68,7 +63,7 @@ export const portfolioData = {
     {
       degree: "BSc, Programming & Data Science",
       institution: "IITM",
-      duration: "2022 - 2026",
+      duration: "2022 - 2024",
       score: "CGPA: 7.3"
     },
     {

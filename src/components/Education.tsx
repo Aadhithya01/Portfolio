@@ -18,7 +18,7 @@ export function Education() {
                           <CardTitle className="font-headline text-xl text-primary">{edu.degree}</CardTitle>
                           <CardDescription className="text-base">{edu.institution}</CardDescription>
                       </div>
-                      <div className="text-sm text-muted-foreground text-right">{edu.duration}</div>
+                      <div className="text-sm text-muted-foreground text-right flex-shrink-0 ml-4">{edu.duration}</div>
                   </div>
                 </CardHeader>
                 <CardContent>
