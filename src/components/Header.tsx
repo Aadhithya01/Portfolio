@@ -11,25 +11,25 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
-        <div className="mr-4 flex-1 md:flex-none">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+        <div className="flex items-center">
+          <Link href="/" className="flex items-center space-x-2">
             <span className="font-bold sm:inline-block">
               {portfolioData.name}
             </span>
           </Link>
         </div>
-        <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-          {portfolioData.navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="transition-colors hover:text-foreground/80 text-muted-foreground"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
-        <div className="flex flex-1 items-center justify-end space-x-2">
+        <div className="flex flex-1 items-center justify-end space-x-4">
+          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+            {portfolioData.navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="transition-colors hover:text-foreground/80 text-muted-foreground"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
           <ThemeToggle />
           <div className="md:hidden">
             <Sheet>
