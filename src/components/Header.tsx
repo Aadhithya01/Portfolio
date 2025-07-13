@@ -13,7 +13,7 @@ export function Header() {
       <div className="container flex h-14 items-center">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold sm:inline-block">
+            <span className="font-bold sm:inline-block font-headline">
               {portfolioData.name}
             </span>
           </Link>
@@ -24,7 +24,7 @@ export function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="transition-colors hover:text-foreground/80 text-muted-foreground"
+                className="transition-colors hover:text-foreground/80 text-muted-foreground font-body"
               >
                 {link.name}
               </Link>
@@ -45,7 +45,7 @@ export function Header() {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="text-lg font-medium transition-colors hover:text-foreground/80 text-muted-foreground"
+                      className="text-lg font-medium transition-colors hover:text-foreground/80 text-muted-foreground font-body"
                     >
                       {link.name}
                     </Link>
