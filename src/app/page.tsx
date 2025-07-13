@@ -1,6 +1,7 @@
 'use client';
 import { About } from '@/components/About';
 import { Certifications } from '@/components/Certifications';
+import { Contact } from '@/components/Contact';
 import { Education } from '@/components/Education';
 import { Experience } from '@/components/Experience';
 import { Footer } from '@/components/Footer';
@@ -25,6 +26,7 @@ export default function Home() {
         <Certifications />
         <Leadership />
         <Publications />
+        <Contact />
       </main>
       <Footer />
     </div>

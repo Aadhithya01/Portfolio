@@ -17,6 +17,7 @@ export const portfolioData = {
     { name: 'Skills', href: '#skills' },
     { name: 'Education', href: '#education' },
     { name: 'Certifications', href: '#certifications' },
+    { name: 'Contact', href: '#contact' },
   ],
   about: {
     summary: "Proactive AI Engineer building smart, scalable, and cloud-native AI systems using modern open-source tools. Experienced in developing LLM-powered solutions, machine learning workflows, and automated data extraction pipelines. Passionate about driving business impact through intelligent automation while staying current with the latest in generative AI and open-source innovation"
