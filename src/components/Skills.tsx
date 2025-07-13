@@ -28,14 +28,14 @@ const skillSections = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-6 bg-secondary group">
+    <section id="skills" className="py-12 group">
       <div className="container mx-auto px-4">
         <h2 className="mb-12 text-center text-3xl font-bold font-headline transition-colors duration-300 group-hover:text-accent">
           Skills
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {skillSections.map((section) => (
-            <Card key={section.title} className="bg-background transition-shadow duration-300 hover:shadow-xl hover:shadow-accent/10">
+            <Card key={section.title} className="bg-secondary transition-shadow duration-300 hover:shadow-xl hover:shadow-accent/10">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 font-headline text-xl">
                   {section.icon}
