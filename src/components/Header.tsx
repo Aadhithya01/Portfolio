@@ -24,7 +24,7 @@ export function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="transition-colors hover:text-foreground/80 text-muted-foreground font-body"
+                className="transition-colors hover:text-accent text-muted-foreground font-body"
               >
                 {link.name}
               </Link>
@@ -45,7 +45,7 @@ export function Header() {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="text-lg font-medium transition-colors hover:text-foreground/80 text-muted-foreground font-body"
+                      className="text-lg font-medium transition-colors hover:text-accent text-muted-foreground font-body"
                     >
                       {link.name}
                     </Link>
