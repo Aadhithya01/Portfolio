@@ -28,9 +28,9 @@ const skillSections = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-6 bg-secondary">
+    <section id="skills" className="py-6 bg-secondary group">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold font-headline">
+        <h2 className="mb-12 text-center text-3xl font-bold font-headline transition-colors duration-300 group-hover:text-accent">
           Skills
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

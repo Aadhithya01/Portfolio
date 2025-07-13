@@ -9,9 +9,9 @@ export function Projects() {
   const { projects } = portfolioData;
 
   return (
-    <section id="projects" className="py-12 bg-secondary">
+    <section id="projects" className="py-12 bg-secondary group">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold font-headline text-primary">Projects</h2>
+        <h2 className="mb-12 text-center text-3xl font-bold font-headline text-primary transition-colors duration-300 group-hover:text-accent">Projects</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <Card key={project.title} className="flex flex-col overflow-hidden border-border bg-background transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-accent/10 hover:border-accent/50">

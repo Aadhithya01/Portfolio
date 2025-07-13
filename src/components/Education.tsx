@@ -6,9 +6,9 @@ export function Education() {
   const { education } = portfolioData;
 
   return (
-    <section id="education" className="py-12">
+    <section id="education" className="py-12 group">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold font-headline text-primary">Education</h2>
+        <h2 className="mb-12 text-center text-3xl font-bold font-headline text-primary transition-colors duration-300 group-hover:text-accent">Education</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-4xl mx-auto">
             {education.map((edu, index) => (
               <Card key={index} className="border-border bg-secondary transition-all duration-300 hover:shadow-xl hover:shadow-accent/10 hover:border-accent/50">

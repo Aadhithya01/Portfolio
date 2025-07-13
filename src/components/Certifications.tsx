@@ -7,9 +7,9 @@ export function Certifications() {
   const { certifications } = portfolioData;
 
   return (
-    <section id="certifications" className="py-12">
+    <section id="certifications" className="py-12 group">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold font-headline text-primary">
+        <h2 className="mb-12 text-center text-3xl font-bold font-headline text-primary transition-colors duration-300 group-hover:text-accent">
           Certifications
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
