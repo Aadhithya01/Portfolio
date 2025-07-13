@@ -88,8 +88,8 @@ export default {
           '100%': { backgroundPosition: '0% 50%' },
         },
         'glow': {
-          '0%, 100%': { textShadow: '0 0 5px hsl(var(--accent)), 0 0 10px hsl(var(--accent)), 0 0 15px hsl(var(--accent))' },
-          '50%': { textShadow: '0 0 10px hsl(var(--accent)), 0 0 20px hsl(var(--accent)), 0 0 30px hsl(var(--accent))' },
+          '0%, 100%': { textShadow: '0 0 5px hsl(var(--accent)), 0 0 10px hsl(var(--accent))' },
+          '50%': { textShadow: '0 0 10px hsl(var(--accent)), 0 0 20px hsl(var(--accent))' },
         }
       },
       animation: {
