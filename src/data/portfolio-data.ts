@@ -61,12 +61,6 @@ export const portfolioData = {
   ],
   education: [
     {
-      degree: "BSc, Programming & Data Science",
-      institution: "IITM",
-      duration: "2022 - 2024",
-      score: "CGPA: 7.3"
-    },
-    {
       degree: "Bachelor of Computer Science & Engineering",
       institution: "Easwari Engineering College",
       duration: "2020 - 2024",
@@ -86,6 +80,7 @@ export const portfolioData = {
     }
   ],
   certifications: [
+    { title: 'Programming and Data science foundation', provider: 'IITM' },
     { title: 'Machine Learning Foundations', provider: 'Deeplearning.AI' },
     { title: 'Build your own Chatbot', provider: 'NPTEL' },
     { title: 'Data analytics with python', provider: 'NPTEL' },
