@@ -21,10 +21,10 @@ export function Hero() {
             className="rounded-full mx-auto mb-6 border-2 border-primary"
             data-ai-hint={portfolioData.avatarHint}
         />
-        <h1 className="mb-2 text-4xl font-bold tracking-tight text-primary sm:text-5xl md:text-6xl lg:text-7xl font-headline">
+        <h1 className="mb-2 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-headline animate-text-gradient bg-gradient-to-r from-primary via-accent to-primary bg-[200%_auto] text-transparent bg-clip-text">
           {portfolioData.name}
         </h1>
-        <p className="mb-6 text-lg text-muted-foreground sm:text-xl md:text-2xl font-headline">
+        <p className="mb-6 text-lg text-muted-foreground sm:text-xl md:text-2xl font-headline animate-text-gradient bg-gradient-to-r from-primary via-accent to-primary bg-[200%_auto] text-transparent bg-clip-text">
           {portfolioData.role}
         </p>
         
