@@ -1,10 +1,9 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { portfolioData } from '@/data/portfolio-data';
 import { ArrowUpRight } from 'lucide-react';
-import Image from "next/image";
 
 export function Projects() {
   const { projects } = portfolioData;
@@ -16,18 +15,10 @@ export function Projects() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <Card key={project.title} className="flex flex-col overflow-hidden border-border bg-background transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-accent/10 hover:border-accent/50">
-              <CardHeader className="p-0">
-                 <Image
-                    src={project.imageUrl}
-                    alt={project.title}
-                    width={600}
-                    height={400}
-                    className="w-full h-48 object-cover"
-                    data-ai-hint={project.imageHint}
-                  />
-              </CardHeader>
-              <CardContent className="flex-grow space-y-4 p-6">
+              <CardHeader>
                 <CardTitle className="font-headline text-primary">{project.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow space-y-4">
                 <p className="text-muted-foreground text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
@@ -35,7 +26,7 @@ export function Projects() {
                   ))}
                 </div>
               </CardContent>
-              <CardFooter className="p-6 pt-0">
+              <CardFooter>
                  <Button asChild variant="link" className="p-0 h-auto text-accent hover:text-accent/80">
                     <a href={project.link} target="_blank" rel="noopener noreferrer">
                       View Project
