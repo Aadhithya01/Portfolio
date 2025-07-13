@@ -11,7 +11,8 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="flex items-center py-12 text-center">
+    <section id="home" className="flex items-center py-12 text-center relative overflow-hidden">
+      <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-background via-accent/10 to-background bg-[size:200%_200%] animate-background-pan -z-10"></div>
       <div className="container mx-auto flex flex-col items-center px-4">
         <Image
             src={portfolioData.avatarUrl}
