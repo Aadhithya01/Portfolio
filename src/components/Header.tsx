@@ -5,6 +5,7 @@ import { portfolioData } from '@/data/portfolio-data';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Header() {
   return (
@@ -29,6 +30,7 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
+          <ThemeToggle />
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
