@@ -16,8 +16,6 @@ export const portfolioData = {
     { name: 'Projects', href: '#projects' },
     { name: 'Education', href: '#education' },
     { name: 'Certifications', href: '#certifications' },
-    { name: 'Leadership', href: '#leadership' },
-    { name: 'Publications', href: '#publications' },
   ],
   about: {
     summary: "Hi, I’m Aadhithya R, an AI Engineer passionate about building intelligent, scalable, and high-performance AI solutions."
