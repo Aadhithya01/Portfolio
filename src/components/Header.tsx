@@ -24,7 +24,7 @@ export function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="transition-colors hover:text-accent text-muted-foreground font-body"
+                className="transition-colors hover:text-accent text-muted-foreground font-body hover:animate-glow"
               >
                 {link.name}
               </Link>

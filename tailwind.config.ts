@@ -87,12 +87,17 @@ export default {
           '50%': { backgroundPosition: '100% 50%' },
           '100%': { backgroundPosition: '0% 50%' },
         },
+        'glow': {
+          '0%, 100%': { textShadow: '0 0 5px hsl(var(--accent)), 0 0 10px hsl(var(--accent)), 0 0 15px hsl(var(--accent))' },
+          '50%': { textShadow: '0 0 10px hsl(var(--accent)), 0 0 20px hsl(var(--accent)), 0 0 30px hsl(var(--accent))' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'text-gradient': 'text-gradient 3s linear infinite',
         'background-pan': 'background-pan 10s ease infinite',
+        'glow': 'glow 1.5s ease-in-out infinite',
       },
     },
   },
