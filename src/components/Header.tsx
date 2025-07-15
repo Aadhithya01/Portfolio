@@ -1,6 +1,3 @@
-'use client';
-
-import Link from 'next/link';
 import { portfolioData } from '@/data/portfolio-data';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -12,22 +9,22 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <div className="flex items-center">
-          <Link href="/" className="flex items-center space-x-2">
+          <a href="/" className="flex items-center space-x-2">
             <span className="font-bold sm:inline-block font-headline">
               {portfolioData.name}
             </span>
-          </Link>
+          </a>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
             {portfolioData.navLinks.map((link) => (
-              <Link
+              <a
                 key={link.name}
                 href={link.href}
                 className="transition-colors hover:text-accent text-muted-foreground font-body hover:animate-glow"
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
           </nav>
           <ThemeToggle />
@@ -42,13 +39,13 @@ export function Header() {
               <SheetContent side="left">
                 <div className="flex flex-col space-y-4 pt-6">
                   {portfolioData.navLinks.map((link) => (
-                    <Link
+                    <a
                       key={link.name}
                       href={link.href}
                       className="text-lg font-medium transition-colors hover:text-accent text-muted-foreground font-body"
                     >
                       {link.name}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </SheetContent>

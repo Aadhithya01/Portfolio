@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { portfolioData } from '@/data/portfolio-data';
 import { Mail, Github, Linkedin, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -14,7 +13,7 @@ export function Hero() {
     <section id="home" className="flex items-center py-12 text-center relative overflow-hidden group">
       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-background via-accent/10 to-background bg-[size:200%_200%] animate-background-pan -z-10"></div>
       <div className="container mx-auto flex flex-col items-center px-4">
-        <Image
+        <img
             src={portfolioData.avatarUrl}
             alt={portfolioData.name}
             width={128}

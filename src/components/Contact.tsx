@@ -1,47 +1,18 @@
-'use client';
-
-import React from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
-import { submitContactForm } from '@/app/actions';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
 import { Send } from 'lucide-react';
 import { Label } from '@/components/ui/label';
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" disabled={pending} className="w-full transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/50">
-      <Send className="mr-2 h-4 w-4" />
-      {pending ? 'Sending...' : 'Send Message'}
-    </Button>
-  );
-}
-
 export function Contact() {
-  const { toast } = useToast();
-  const formRef = React.useRef<HTMLFormElement>(null);
-  const [state, formAction] = useFormState(submitContactForm, {
-    message: '',
-    errors: undefined,
-    success: false,
-  });
-
-  React.useEffect(() => {
-    if (state.message) {
-      toast({
-        title: state.success ? 'Success!' : 'Uh oh!',
-        description: state.message,
-        variant: state.success ? 'default' : 'destructive',
-      });
-      if (state.success) {
-        formRef.current?.reset();
-      }
-    }
-  }, [state, toast]);
+  // In a static site, we can't have a server-side form submission.
+  // This form can be wired up to a third-party service like Formspree or Netlify Forms.
+  // For now, it's a presentational component.
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert("In a real application, this would submit the form!");
+  }
 
   return (
     <section id="contact" className="py-12 bg-secondary group">
@@ -57,23 +28,23 @@ export function Contact() {
             </p>
           </CardHeader>
           <CardContent>
-             <form ref={formRef} action={formAction} className="space-y-6">
+             <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
                     <Input id="name" name="name" placeholder="Your Name" />
-                    {state.errors?.name && <p className="text-sm font-medium text-destructive">{state.errors.name[0]}</p>}
                 </div>
                 <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
                     <Input id="email" name="email" type="email" placeholder="your.email@example.com" />
-                    {state.errors?.email && <p className="text-sm font-medium text-destructive">{state.errors.email[0]}</p>}
                 </div>
                  <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
                     <Textarea id="message" name="message" placeholder="Tell me a little bit about what you're looking for..." className="resize-none" />
-                    {state.errors?.message && <p className="text-sm font-medium text-destructive">{state.errors.message[0]}</p>}
                 </div>
-                <SubmitButton />
+                <Button type="submit" className="w-full">
+                    <Send className="mr-2 h-4 w-4" />
+                    Send Message
+                </Button>
             </form>
           </CardContent>
         </Card>
