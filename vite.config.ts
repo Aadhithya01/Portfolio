@@ -12,8 +12,10 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
+    port: 9002,
   },
   // This will prevent Vite from crashing when unknown flags are passed
+  // by the environment.
   cli: {
     ignoreUnknownFlags: true
   },
