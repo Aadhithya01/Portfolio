@@ -9,6 +9,7 @@ export default defineConfig({
     outDir: 'docs',
     emptyOutDir: true,
   },
+  assetsInclude: ['**/*.JPG'],
   plugins: [react()],
   resolve: {
     alias: {
