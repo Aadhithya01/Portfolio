@@ -1,4 +1,4 @@
-import { motion, useScroll, useSpring } from 'framer-motion';
+import { m, useScroll, useSpring } from 'framer-motion';
 
 /** Thin gradient bar pinned to the top that tracks scroll progress. */
 export function ScrollProgress() {
@@ -10,7 +10,7 @@ export function ScrollProgress() {
   });
 
   return (
-    <motion.div
+    <m.div
       style={{ scaleX }}
       className="fixed left-0 right-0 top-0 z-[60] h-1 origin-left bg-gradient-to-r from-accent via-[hsl(var(--accent-2))] to-accent"
     />

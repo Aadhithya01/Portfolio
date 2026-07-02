@@ -8,50 +8,50 @@ html {
 
 @layer base {
   :root {
-    --background: 210 40% 99%;
-    --foreground: 222.2 47% 11%;
+    --background: 0 0% 99%;
+    --foreground: 240 10% 8%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 47% 11%;
+    --card-foreground: 240 10% 8%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47% 11%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 40%;
-    --accent: 174 72% 41%;
-    --accent-foreground: 210 40% 98%;
-    --accent-2: 258 90% 66%;
+    --popover-foreground: 240 10% 8%;
+    --primary: 240 10% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 5% 95%;
+    --secondary-foreground: 240 10% 10%;
+    --muted: 240 5% 94%;
+    --muted-foreground: 240 4% 40%;
+    --accent: 85 65% 30%;
+    --accent-foreground: 0 0% 98%;
+    --accent-2: 195 90% 32%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 88%;
-    --input: 214.3 31.8% 88%;
-    --ring: 174 72% 41%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 6% 88%;
+    --input: 240 6% 88%;
+    --ring: 85 65% 30%;
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 224 44% 5%;
-    --foreground: 210 40% 96%;
-    --card: 224 34% 9%;
-    --card-foreground: 210 40% 96%;
-    --popover: 224 40% 6%;
-    --popover-foreground: 210 40% 96%;
-    --primary: 210 40% 96%;
-    --primary-foreground: 224 44% 5%;
-    --secondary: 222 30% 11%;
-    --secondary-foreground: 210 40% 96%;
-    --muted: 222 25% 16%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 172 85% 45%;
-    --accent-foreground: 224 44% 5%;
-    --accent-2: 258 90% 70%;
+    --background: 240 10% 4%;
+    --foreground: 0 0% 95%;
+    --card: 240 6% 7%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 8% 6%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 240 10% 4%;
+    --secondary: 240 5% 10%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 240 5% 14%;
+    --muted-foreground: 240 5% 63%;
+    --accent: 84 85% 58%;
+    --accent-foreground: 240 10% 4%;
+    --accent-2: 190 95% 55%;
     --destructive: 0 62.8% 45%;
-    --destructive-foreground: 210 40% 96%;
-    --border: 222 25% 18%;
-    --input: 222 25% 18%;
-    --ring: 172 85% 45%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 240 6% 14%;
+    --input: 240 6% 14%;
+    --ring: 84 85% 58%;
   }
 }
 
@@ -63,6 +63,10 @@ html {
     @apply bg-background text-foreground;
     overflow-x: hidden;
   }
+  ::selection {
+    background: hsl(var(--accent) / 0.85);
+    color: hsl(var(--accent-foreground));
+  }
 }
 
 @layer utilities {
@@ -71,10 +75,10 @@ html {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(
       110deg,
-      hsl(var(--primary)),
+      hsl(var(--foreground)),
       hsl(var(--accent)),
       hsl(var(--accent-2)),
-      hsl(var(--primary))
+      hsl(var(--foreground))
     );
     background-size: 200% auto;
   }
@@ -90,11 +94,11 @@ html {
   /* Faint grid overlay */
   .bg-grid {
     background-image:
-      linear-gradient(to right, hsl(var(--border) / 0.35) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--border) / 0.35) 1px, transparent 1px);
+      linear-gradient(to right, hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.4) 1px, transparent 1px);
     background-size: 44px 44px;
-    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 55%, transparent 100%);
-    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 55%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 80% at 30% 30%, #000 45%, transparent 100%);
+    mask-image: radial-gradient(ellipse 90% 80% at 30% 30%, #000 45%, transparent 100%);
   }
 
   /* Animated gradient border card */
@@ -134,10 +138,10 @@ html {
   background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--accent) / 0.5);
+  background: hsl(var(--accent) / 0.45);
   border-radius: 9999px;
   border: 2px solid hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--accent) / 0.8);
+  background: hsl(var(--accent) / 0.75);
 }

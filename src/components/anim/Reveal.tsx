@@ -1,4 +1,4 @@
-import { motion, type Variants } from 'framer-motion';
+import { m, type Variants } from 'framer-motion';
 import React from 'react';
 
 type Direction = 'up' | 'down' | 'left' | 'right' | 'none';
@@ -18,7 +18,6 @@ interface RevealProps {
   delay?: number;
   duration?: number;
   once?: boolean;
-  as?: keyof typeof motion;
 }
 
 export function Reveal({
@@ -40,7 +39,7 @@ export function Reveal({
   };
 
   return (
-    <motion.div
+    <m.div
       className={className}
       variants={variants}
       initial="hidden"
@@ -48,7 +47,7 @@ export function Reveal({
       viewport={{ once, amount: 0.2 }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -68,7 +67,7 @@ export function RevealGroup({
   once?: boolean;
 }) {
   return (
-    <motion.div
+    <m.div
       className={className}
       initial="hidden"
       whileInView="show"
@@ -79,7 +78,7 @@ export function RevealGroup({
       }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 

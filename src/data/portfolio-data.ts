@@ -19,8 +19,7 @@ export const portfolioData = {
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Certifications', href: '#certifications' },
-    { name: 'Education', href: '#education' },
+    { name: 'Credentials', href: '#credentials' },
     { name: 'Contact', href: '#contact' },
   ],
   about: {
