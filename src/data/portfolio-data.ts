@@ -1,99 +1,174 @@
-
 export const portfolioData = {
   name: "Aadhithya R",
   role: "AI Engineer",
+  tagline: "Turning complex business problems into scalable, production-grade AI systems.",
   avatarUrl: "https://placehold.co/128x128.png",
   avatarHint: "man portrait",
+  location: "Erode, India",
+  phone: "+91 95145 82641",
   contact: {
     email: "aadhithyaraja180@gmail.com",
     github: "https://github.com/Aadhithya01",
-    linkedin: "https://linkedin.com/in/aadhithyar",
+    linkedin: "https://www.linkedin.com/in/aadhithyar",
+    leetcode: "https://leetcode.com/Aadhi01/",
+    medium: "https://medium.com/@aadhithyaraja180",
   },
-  resumeUrl: "/Aadhithya-Resume.pdf",
+  resumeUrl: "/Portfolio/Aadhithya_Resume.pdf",
   navLinks: [
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Education', href: '#education' },
     { name: 'Certifications', href: '#certifications' },
+    { name: 'Education', href: '#education' },
     { name: 'Contact', href: '#contact' },
   ],
   about: {
-    summary: "Proactive AI Engineer building smart, scalable, and cloud-native AI systems using modern open-source tools. Experienced in developing LLM-powered solutions, machine learning workflows, and automated data extraction pipelines. Passionate about driving business impact through intelligent automation while staying current with the latest in generative AI and open-source innovation"
+    summary:
+      "AI Engineer focused on transforming complex business problems into scalable AI-driven solutions. Passionate about analyzing operational workflows, uncovering inefficiencies, and building intelligent systems that automate repetitive tasks, streamline decision-making, and improve customer experiences. Experienced in developing production-grade LLM applications, machine learning pipelines, intelligent automation systems, and cloud-based AI solutions with a strong emphasis on measurable business impact and long-term maintainability.",
   },
-  skills: {
-    languages: ["Python", "R", "SQL"],
-    frameworks: ["Langchain", "FastAPI", "TensorFlow", "Keras", "Scikit Learn", "Seaborn", "ggplot2", "Streamlit"],
-    tools: ["GitHub", "AWS", "MySQL", "Docker", "Postman", "Matplot", "Pandas", "NumPy", "Sheets", "Lucidchart"],
-    softSkills: ["Leadership", "Teamwork"]
-  },
-  projects: [
+  // Headline numbers used for the animated counter band.
+  stats: [
+    { value: 80, suffix: "%", label: "Manual effort reduced via OCR + Textract pipelines" },
+    { value: 65, suffix: "%", label: "Support tickets cut with a production tax chatbot" },
+    { value: 1000, suffix: "+", label: "Daily queries handled in production" },
+    { value: 8, suffix: "x", label: "Memory footprint reduced fine-tuning Mistral-7B" },
+  ],
+  skills: [
     {
-      title: "Chat with PDFs",
-      description: "Engineered a web application using Python and Streamlit, enabling users to interactively ask questions about uploaded PDF files, reducing document analysis time by 50%. Implemented Google’s Generative AI for natural language understanding and FAISS for efficient similarity search, facilitating intelligent question-answering based on PDF content with 90% accuracy. Optimized user experience by ensuring quick and accurate responses, improving user satisfaction ratings by 40%.",
-      tech: ["Python", "Streamlit", "Google Generative AI", "FAISS"],
-      link: "https://github.com/Aadhithya01",
+      title: "AI / ML & LLMs",
+      items: ["Machine Learning", "LLMs", "RAG", "AI Agents", "NLP", "Prompt Engineering", "LangChain", "MCP", "Tesseract OCR", "AWS Textract"],
     },
     {
-      title: "Voiceover GPT Bot",
-      description: "Created an interactive voice-activated assistant leveraging OpenAI’s GPT-3.5-turbo model to provide intelligent and context-aware responses, increasing response relevance by 60%. Utilized Google Speech Recognition for accurate speech-to-text conversion and pyttsx3 for natural text-to-speech functionality, delivering a seamless real-time user interaction experience with 95% speech recognition accuracy. Enhanced accessibility and user engagement by enabling hands-free communication, boosting user interaction by 35%.",
-      tech: ["Python", "OpenAI GPT-3.5", "Google Speech Recognition", "pyttsx3"],
-      link: "https://github.com/Aadhithya01",
+      title: "Fine-Tuning & Research",
+      items: ["HuggingFace", "PEFT", "TRL", "QLoRA", "LoRA", "Mistral 7B"],
     },
     {
-      title: "Assignment Generator",
-      description: "Developed a comprehensive tool for web scraping and text processing, extracting and rephrasing Wikipedia content using OpenAI’s GPT-3.5-turbo model, increasing content generation efficiency by 70%. Integrated Selenium for automated web browsing and BeautifulSoup for efficient HTML parsing, ensuring accurate content retrieval with a 95% success rate. Leveraged Requests for HTTP requests and included features to save rephrased text into files, facilitating easy content extraction and transformation for academic and research purposes, reducing manual effort by 60%.",
-      tech: ["Python", "OpenAI GPT-3.5", "Selenium", "BeautifulSoup"],
-      link: "https://github.com/Aadhithya01",
-    }
+      title: "Systems Design",
+      items: ["REST API Design", "Microservices", "Request Queuing", "Celery", "Concurrency Management"],
+    },
+    {
+      title: "Open Source Tools",
+      items: ["Flowise", "Langflow", "Langfuse", "Chatwoot", "Zammad", "Typebot", "Directus", "Ollama"],
+    },
+    {
+      title: "Languages & Frameworks",
+      items: ["Python", "FastAPI", "Streamlit", "REST APIs", "OpenAI SDK", "Anthropic SDK", "LaTeX"],
+    },
+    {
+      title: "Databases & Storage",
+      items: ["PostgreSQL", "MongoDB", "FAISS", "PgVector", "Supabase", "SQLite"],
+    },
+    {
+      title: "Cloud & DevOps",
+      items: ["AWS (S3, Bedrock, SageMaker)", "Docker", "RunPod", "Git"],
+    },
   ],
   experience: [
     {
       role: "Junior AI Engineer",
-      company: "SPAN Technology Services Private Ltd",
-      duration: "Jan 2024 - Present",
-      responsibilities: [
-        "Developed an AI chat-bot designed to assist users with tax filing processes in the US. Integrated conversational retrieval memory to maintain context and provide personalized assistance, enhancing overall user experience and operational efficiency.",
-        "Drastically reduced the time from manual data entry by implementing AWS Textract to extract data from multi-page PDFs and automatically populate an Excel template. Created an API endpoint using FastAPI, then dockerized it and provided the endpoint to be hosted on a server.",
-        "Conducted time series analysis to forecast next month’s website traffic using historical data, thereby optimizing operational planning and resource allocation."
-      ]
-    }
+      company: "SPAN Technology Services Private Ltd.",
+      duration: "January 2024 – Present",
+      location: "Erode, India",
+      highlights: [
+        {
+          title: "Architected an MCP-Powered Multi-Tool Assistant with Context-Aware Escalation",
+          points: [
+            "New users struggled to navigate the tax-filing platform even with guided in-app navigation; built an MCP-powered chatbot enabling direct natural-language queries with intent-based tool routing across 10+ internal tax application APIs.",
+            "Enriched every request with real-time user and page context via API for personalized, context-aware responses.",
+            "Designed auto-escalation to live agents with full conversation history on unresolved queries — improving resolution rate by 30%.",
+          ],
+        },
+        {
+          title: "Anything to Return — Automated Multi-Format Return Generation",
+          points: [
+            "Clients received tax data across disparate formats — PDF, Excel, CSV, Image, Parquet, ORC, JSON, and FIRE — requiring manual filing and consolidation before a return could be prepared.",
+            "Led a team of 2 to design and build a system that automatically extracts data from any supported format and generates a structured return, using Celery-based task queuing to handle concurrent processing requests.",
+            "Built a validation step allowing users to review the generated return before transmission, ensuring accuracy while eliminating manual data entry.",
+          ],
+        },
+        {
+          title: "Engineered a Multi-Engine Document Extraction Pipeline — 80% Manual Effort Reduction",
+          points: [
+            "Tax forms (W9, W8, W8-BEN, 1095-C, 1042) arrived primarily as image-based PDFs requiring manual data entry.",
+            "Built independently tuned extraction endpoints per form type, selecting Tesseract OCR or AWS Textract based on layout complexity.",
+            "Implemented Celery-based request queuing to prevent single-user resource monopolization during concurrent multi-file uploads, reducing manual data entry by 80%.",
+          ],
+        },
+        {
+          title: "Shipped a Production Tax-Filing Chatbot with an Auto-Retraining Pipeline — 65% Support Reduction",
+          points: [
+            "Frequent tax regulation updates required manual re-embedding of content into the vector database — time-consuming and error-prone at scale.",
+            "Built a Directus-based auto-retraining pipeline detecting content changes and selectively re-embedding only modified chunks, gated through Slack approval.",
+            "Deployed an LLM-powered chatbot via Flowise handling 1,000+ daily queries, reducing support tickets by 65%.",
+          ],
+        },
+        {
+          title: "Deployed Self-Hosted AI Infrastructure — Eliminated Recurring SaaS Costs",
+          points: [
+            "Reliance on third-party SaaS tools for chat, support, and automation drove recurring subscription costs at scale.",
+            "Self-hosted Flowise, Langfuse, Zammad, Chatwoot, and Typebot via Docker, eliminating third-party SaaS dependency across internal and production environments.",
+            "Developed 10+ modular APIs for conversation summarization, sentiment classification, ticket management, and data validation.",
+          ],
+        },
+      ],
+    },
+  ],
+  projects: [
+    {
+      title: "Multi-Format Automated Tax Return Generator",
+      description:
+        "An automated pipeline that ingests tax data in any supported format (PDF, Excel, CSV, Image, Parquet, ORC, JSON, FIRE), extracts and validates the data, and generates a transmit-ready return post-payment — replacing manual consolidation. Extraction accuracy and pipeline reliability were validated across sample datasets spanning all 8 supported formats.",
+      tech: ["Python", "Celery", "AWS Textract", "FastAPI", "Data Pipelines"],
+      link: "https://github.com/Aadhithya01",
+    },
+    {
+      title: "Job Hunt MCP Server & Multi-LLM Client",
+      description:
+        "An MCP server that automates the end-to-end job search — searching LinkedIn and Indeed simultaneously and scoring listings against a resume via a multi-signal ranking system (ATS score, keyword match, hire probability, seniority and salary fit). Exposes 10 MCP tools (cover-letter generation, resume suggestions, application tracking, side-by-side comparison) plus a companion chat client supporting Anthropic SDK, OpenAI SDK, Gemini, and Ollama.",
+      tech: ["MCP", "Anthropic SDK", "OpenAI SDK", "Gemini", "Ollama", "Python"],
+      link: "https://github.com/Aadhithya01",
+    },
+    {
+      title: "LLM Fine-Tuning with QLoRA on Mistral 7B",
+      description:
+        "Fine-tuned Mistral-7B-Instruct using QLoRA (4-bit NF4 quantization + LoRA adapters) on the Alpaca dataset for instruction-following. Implemented the full pipeline from scratch — quantization config, adapter attachment, dataset formatting, and supervised fine-tuning — training only 0.047% of parameters (3.4M of 7.2B), an 8x memory reduction vs. full fine-tuning, with stable loss convergence from 1.33 to 0.85.",
+      tech: ["HuggingFace", "PEFT", "TRL", "QLoRA", "LoRA", "Mistral 7B"],
+      link: "https://github.com/Aadhithya01",
+    },
+    {
+      title: "Synthetic Customer Data Generator (PostgreSQL + Faker)",
+      description:
+        "A Python utility that simulates and inserts realistic customer order data into PostgreSQL for testing and development. Structured scalable schemas and auto-populated 100+ diverse records — cutting test-data preparation time by 80% — with secure, asynchronous connectivity via asyncpg and environment-based configuration.",
+      tech: ["Python", "PostgreSQL", "Faker", "asyncpg"],
+      link: "https://github.com/Aadhithya01",
+    },
+  ],
+  certifications: [
+    { title: "AWS Certified AI Practitioner", provider: "Amazon Web Services", year: "2024" },
+    { title: "Machine Learning Foundations", provider: "DeepLearning.AI", year: "2024" },
+    { title: "Build Your Own Chatbot", provider: "AWS Educate", year: "2024" },
+    { title: "Foundation in Programming and Data Science", provider: "IIT Madras", year: "2023" },
   ],
   education: [
     {
       degree: "Bachelor of Computer Science & Engineering",
       institution: "Easwari Engineering College",
-      duration: "2020 - 2024",
-      score: "CGPA: 9.5"
+      duration: "2020 – 2024",
+      score: "CGPA: 9.5",
+      honor: "Gold Medalist — Department of Computer Science & Engineering",
     },
-    {
-      degree: "Higher Secondary Education",
-      institution: "SRV Matriculation Hr. Sec. School Samayapuram",
-      duration: "2019 - 2020",
-      score: "Percentage: 84%"
-    },
-    {
-      degree: "Secondary Education",
-      institution: "SBOA School & Junior College",
-      duration: "2017 - 2018",
-      score: "Percentage: 83%"
-    }
-  ],
-  certifications: [
-    { title: 'Programming and Data science foundation', provider: 'IITM' },
-    { title: 'Machine Learning Foundations', provider: 'Deeplearning.AI' },
-    { title: 'Build your own Chatbot', provider: 'NPTEL' },
-    { title: 'Data analytics with python', provider: 'NPTEL' },
-    { title: 'AWS Educate Certification', provider: 'AWS' },
-  ],
-  leadership: [
-    { title: 'Representative (2020-2024)', provider: 'Easwari Rotaract Community' },
-    { title: 'Lead (2022-2024)', provider: 'College Coding Club' },
-    { title: 'Events Lead (2023-2024)', provider: 'Department Symposium' },
   ],
   publications: [
-      { title: 'How to create a legend for a contour plot in matplotlib', source: 'Codespeedy' },
-      { title: 'Generate secure random string using Secrets module in Python', source: 'Codespeedy' }
-  ]
+    {
+      title: "Docker Build Not Updating? The Build Cache is Probably Why.",
+      source: "Medium",
+      link: "https://medium.com/@aadhithyaraja180",
+    },
+    {
+      title: "Tired of Re-Embedding Manually? Here's How We Fixed It for Good",
+      source: "Medium",
+      link: "https://medium.com/@aadhithyaraja180",
+    },
+  ],
 };

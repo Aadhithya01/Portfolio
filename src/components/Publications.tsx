@@ -1,36 +1,43 @@
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 import { portfolioData } from '@/data/portfolio-data';
-import { BookOpen } from 'lucide-react';
+import { SectionHeading } from '@/components/anim/SectionHeading';
+import { RevealGroup, staggerItem } from '@/components/anim/Reveal';
+import { PenLine, ArrowUpRight } from 'lucide-react';
 
 export function Publications() {
   const { publications } = portfolioData;
 
-  if (!publications || publications.length === 0) {
-    return null;
-  }
+  if (!publications || publications.length === 0) return null;
 
   return (
-    <section id="publications" className="py-12 group">
+    <section id="publications" className="relative py-24">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold font-headline text-primary transition-colors duration-300 group-hover:text-accent">
-          Publications
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {publications.map((pub, index) => (
-            <Card key={index} className="border-border bg-secondary transition-all duration-300 hover:shadow-xl hover:shadow-accent/10 hover:border-accent/50">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                    <BookOpen className="h-8 w-8 flex-shrink-0 text-accent" />
-                    <div>
-                        <h3 className="font-semibold text-lg">{pub.title}</h3>
-                        <p className="text-sm text-muted-foreground">{pub.source}</p>
-                    </div>
-                </div>
-              </CardContent>
-            </Card>
+        <SectionHeading eyebrow="Writing" title="Publications" />
+
+        <RevealGroup className="mx-auto grid max-w-4xl grid-cols-1 gap-4 md:grid-cols-2">
+          {publications.map((pub) => (
+            <motion.a
+              key={pub.title}
+              href={pub.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={staggerItem}
+              whileHover={{ y: -4 }}
+              className="gradient-border group flex items-start gap-4 rounded-xl border border-border bg-card/60 p-5 backdrop-blur transition-shadow hover:shadow-lg hover:shadow-accent/10"
+            >
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
+                <PenLine className="h-5 w-5" />
+              </div>
+              <div className="flex-grow">
+                <h3 className="font-medium leading-snug text-foreground transition-colors group-hover:text-accent">
+                  {pub.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">{pub.source}</p>
+              </div>
+              <ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent" />
+            </motion.a>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

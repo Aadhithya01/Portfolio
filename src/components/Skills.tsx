@@ -1,57 +1,67 @@
+import { motion } from 'framer-motion';
 import { portfolioData } from '@/data/portfolio-data';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Code, Wrench, Users, Lightbulb } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
+import { SectionHeading } from '@/components/anim/SectionHeading';
+import { RevealGroup, staggerItem } from '@/components/anim/Reveal';
+import { Brain, FlaskConical, Network, Boxes, Code2, Database, Cloud } from 'lucide-react';
 
-const skillSections = [
-  {
-    title: 'Languages',
-    icon: <Code className="h-6 w-6 text-accent" />,
-    skills: portfolioData.skills.languages,
-  },
-  {
-    title: 'Frameworks & Libraries',
-    icon: <Wrench className="h-6 w-6 text-accent" />,
-    skills: portfolioData.skills.frameworks,
-  },
-  {
-    title: 'Tools & Technologies',
-    icon: <Lightbulb className="h-6 w-6 text-accent" />,
-    skills: portfolioData.skills.tools,
-  },
-  {
-    title: 'Soft Skills',
-    icon: <Users className="h-6 w-6 text-accent" />,
-    skills: portfolioData.skills.softSkills,
-  },
-];
+const icons = [Brain, FlaskConical, Network, Boxes, Code2, Database, Cloud];
+
+// Flat list for the scrolling marquee.
+const marquee = portfolioData.skills.flatMap((s) => s.items);
 
 export function Skills() {
   return (
-    <section id="skills" className="py-12 group">
+    <section id="skills" className="relative py-24">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold font-headline transition-colors duration-300 group-hover:text-accent">
-          Skills
-        </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {skillSections.map((section) => (
-            <Card key={section.title} className="bg-secondary transition-shadow duration-300 hover:shadow-xl hover:shadow-accent/10">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3 font-headline text-xl">
-                  {section.icon}
-                  {section.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
+        <SectionHeading
+          eyebrow="Toolbox"
+          title="Skills & Technologies"
+          subtitle="The stack I use to design, build, and ship AI systems end to end."
+        />
+
+        <RevealGroup className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {portfolioData.skills.map((section, idx) => {
+            const Icon = icons[idx % icons.length];
+            return (
+              <motion.div
+                key={section.title}
+                variants={staggerItem}
+                whileHover={{ y: -6 }}
+                className="gradient-border rounded-2xl border border-border bg-card/60 p-6 backdrop-blur transition-shadow hover:shadow-xl hover:shadow-accent/10"
+              >
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="font-headline text-lg font-semibold text-foreground">{section.title}</h3>
+                </div>
                 <div className="flex flex-wrap gap-2">
-                  {section.skills.map((skill) => (
-                    <Badge key={skill} variant="secondary">
-                      {skill}
-                    </Badge>
+                  {section.items.map((item) => (
+                    <motion.span
+                      key={item}
+                      whileHover={{ scale: 1.08 }}
+                      className="cursor-default rounded-md border border-border bg-secondary/60 px-2.5 py-1 text-xs text-foreground/80 transition-colors hover:border-accent hover:text-accent"
+                    >
+                      {item}
+                    </motion.span>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
+              </motion.div>
+            );
+          })}
+        </RevealGroup>
+      </div>
+
+      {/* Infinite marquee */}
+      <div className="relative mt-16 flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]">
+        <div className="flex shrink-0 animate-marquee gap-4 pr-4">
+          {[...marquee, ...marquee].map((item, i) => (
+            <span
+              key={i}
+              className="whitespace-nowrap rounded-full border border-border bg-card/40 px-4 py-1.5 text-sm text-muted-foreground backdrop-blur"
+            >
+              {item}
+            </span>
           ))}
         </div>
       </div>
