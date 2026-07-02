@@ -1,43 +1,64 @@
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { m } from 'framer-motion';
 import { portfolioData } from '@/data/portfolio-data';
-import { ArrowUpRight } from 'lucide-react';
+import { SectionHeading } from '@/components/anim/SectionHeading';
+import { RevealGroup, staggerItem } from '@/components/anim/Reveal';
+import { TiltCard } from '@/components/anim/TiltCard';
+import { Badge } from '@/components/ui/badge';
+import { ArrowUpRight, FolderGit2 } from 'lucide-react';
 
 export function Projects() {
   const { projects } = portfolioData;
 
   return (
-    <section id="projects" className="py-12 bg-secondary group">
-      <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold font-headline text-primary transition-colors duration-300 group-hover:text-accent">Projects</h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <Card key={project.title} className="group/item flex flex-col overflow-hidden border-border bg-background transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-accent/10 hover:border-accent/50">
-              <CardHeader>
-                <CardTitle className="font-headline text-primary transition-colors duration-300 group-hover/item:text-accent">{project.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow space-y-4">
-                <p className="text-muted-foreground text-sm text-justify">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <Badge key={tech} variant="outline">{tech}</Badge>
-                  ))}
-                </div>
-              </CardContent>
-              <CardFooter>
-                 <Button asChild variant="link" className="p-0 h-auto text-accent hover:text-accent/80">
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">
-                      View Project
-                      <ArrowUpRight className="ml-1 h-4 w-4" />
-                    </a>
-                  </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-      </div>
+    <section id="projects" className="scroll-mt-24">
+      <SectionHeading
+        eyebrow="Selected Work"
+        title="Projects"
+        subtitle="Production systems and experiments across LLM applications, agents, and ML pipelines."
+      />
+
+      <RevealGroup className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {projects.map((project) => (
+          <TiltCard key={project.title} className="h-full">
+          <m.a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            variants={staggerItem}
+            className="gradient-border group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card/60 p-5 backdrop-blur transition-shadow hover:shadow-2xl hover:shadow-accent/10"
+          >
+            {/* Hover spotlight */}
+            <div className="pointer-events-none absolute -right-14 -top-14 h-36 w-36 rounded-full bg-accent/20 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+
+            <div className="mb-3 flex items-center justify-between">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
+                <FolderGit2 className="h-5 w-5" />
+              </div>
+              <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent" />
+            </div>
+
+            <h3 className="mb-2 font-headline text-base font-semibold text-foreground transition-colors group-hover:text-accent sm:text-lg">
+              {project.title}
+            </h3>
+            <p className="mb-4 flex-grow text-[13px] leading-relaxed text-muted-foreground">
+              {project.description}
+            </p>
+
+            <div className="flex flex-wrap gap-1.5">
+              {project.tech.map((tech) => (
+                <Badge
+                  key={tech}
+                  variant="outline"
+                  className="border-accent/30 bg-accent/5 text-[11px] text-foreground/80"
+                >
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+          </m.a>
+          </TiltCard>
+        ))}
+      </RevealGroup>
     </section>
   );
 }
