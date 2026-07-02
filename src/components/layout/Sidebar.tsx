@@ -2,7 +2,7 @@ import { m } from 'framer-motion';
 import { portfolioData } from '@/data/portfolio-data';
 import { useTypewriter } from '@/hooks/use-typewriter';
 import { Button } from '@/components/ui/button';
-import { Mail, Github, Linkedin, Download, Code2, BookOpen, MapPin } from 'lucide-react';
+import { Mail, Github, Linkedin, Download, Code2, BookOpen } from 'lucide-react';
 import profileImage from '@/assets/profile.jpg';
 import resumePdf from '@/assets/Aadhithya_Resume.pdf';
 
@@ -55,8 +55,6 @@ export function Sidebar({ active }: SidebarProps) {
             <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
           </span>
           Open to opportunities
-          <span className="mx-0.5 h-3 w-px bg-border" />
-          <MapPin className="h-3 w-3" /> {portfolioData.location}
         </span>
 
         <h1
