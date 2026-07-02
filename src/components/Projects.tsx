@@ -2,6 +2,7 @@ import { m } from 'framer-motion';
 import { portfolioData } from '@/data/portfolio-data';
 import { SectionHeading } from '@/components/anim/SectionHeading';
 import { RevealGroup, staggerItem } from '@/components/anim/Reveal';
+import { TiltCard } from '@/components/anim/TiltCard';
 import { Badge } from '@/components/ui/badge';
 import { ArrowUpRight, FolderGit2 } from 'lucide-react';
 
@@ -18,14 +19,13 @@ export function Projects() {
 
       <RevealGroup className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {projects.map((project) => (
+          <TiltCard key={project.title} className="h-full">
           <m.a
-            key={project.title}
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
             variants={staggerItem}
-            whileHover={{ y: -6 }}
-            className="gradient-border group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card/60 p-5 backdrop-blur transition-shadow hover:shadow-2xl hover:shadow-accent/10"
+            className="gradient-border group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card/60 p-5 backdrop-blur transition-shadow hover:shadow-2xl hover:shadow-accent/10"
           >
             {/* Hover spotlight */}
             <div className="pointer-events-none absolute -right-14 -top-14 h-36 w-36 rounded-full bg-accent/20 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
@@ -56,6 +56,7 @@ export function Projects() {
               ))}
             </div>
           </m.a>
+          </TiltCard>
         ))}
       </RevealGroup>
     </section>

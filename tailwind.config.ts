@@ -118,6 +118,19 @@ export default {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
         },
+        'blob-morph': {
+          '0%, 100%': { borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' },
+          '33%': { borderRadius: '30% 60% 70% 40% / 50% 60% 30% 60%' },
+          '66%': { borderRadius: '50% 60% 30% 60% / 30% 60% 70% 40%' },
+        },
+        'twinkle': {
+          '0%, 100%': { opacity: '0.15', transform: 'scale(0.8)' },
+          '50%': { opacity: '0.9', transform: 'scale(1.25)' },
+        },
+        'marquee-reverse': {
+          from: { transform: 'translateX(-50%)' },
+          to: { transform: 'translateX(0)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -132,6 +145,9 @@ export default {
         'shimmer': 'shimmer 2s infinite',
         'pulse-ring': 'pulse-ring 2.4s cubic-bezier(0.4,0,0.2,1) infinite',
         'blink': 'blink 1s step-end infinite',
+        'blob-morph': 'blob-morph 14s ease-in-out infinite',
+        'twinkle': 'twinkle 3.5s ease-in-out infinite',
+        'marquee-reverse': 'marquee-reverse 45s linear infinite',
       },
     },
   },

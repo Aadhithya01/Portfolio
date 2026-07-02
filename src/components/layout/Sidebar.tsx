@@ -38,7 +38,7 @@ export function Sidebar({ active }: SidebarProps) {
       >
         {/* Portrait */}
         <div className="relative mb-6">
-          <div className="absolute inset-0 -m-3 rounded-3xl bg-gradient-to-tr from-accent/30 to-[hsl(var(--accent-2))]/30 blur-xl" />
+          <div className="absolute inset-0 -m-3 bg-gradient-to-tr from-accent/40 to-[hsl(var(--accent-2))]/40 blur-xl animate-blob-morph" />
           <div className="relative h-28 w-28 rounded-2xl p-[2px] sm:h-32 sm:w-32">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-accent via-[hsl(var(--accent-2))] to-accent animate-spin-slow" />
             <img
@@ -59,8 +59,22 @@ export function Sidebar({ active }: SidebarProps) {
           <MapPin className="h-3 w-3" /> {portfolioData.location}
         </span>
 
-        <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">
-          <span className="text-gradient animate-text-gradient">{portfolioData.name}</span>
+        <h1
+          aria-label={portfolioData.name}
+          className="font-headline text-4xl font-bold tracking-tight sm:text-5xl"
+        >
+          {portfolioData.name.split('').map((ch, i) => (
+            <m.span
+              key={i}
+              aria-hidden
+              initial={{ opacity: 0, y: 24, rotateX: 90 }}
+              animate={{ opacity: 1, y: 0, rotateX: 0 }}
+              transition={{ delay: 0.15 + i * 0.045, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="inline-block text-gradient animate-text-gradient"
+            >
+              {ch === ' ' ? ' ' : ch}
+            </m.span>
+          ))}
         </h1>
 
         <p className="mt-3 h-7 font-headline text-lg text-foreground sm:text-xl">

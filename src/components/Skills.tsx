@@ -51,17 +51,31 @@ export function Skills() {
         })}
       </RevealGroup>
 
-      {/* Infinite marquee */}
-      <div className="relative mt-8 flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]">
-        <div className="flex shrink-0 animate-marquee gap-3 pr-3">
-          {[...marquee, ...marquee].map((item, i) => (
-            <span
-              key={i}
-              className="whitespace-nowrap rounded-full border border-border bg-card/40 px-3 py-1 text-xs text-muted-foreground backdrop-blur"
-            >
-              {item}
-            </span>
-          ))}
+      {/* Dual-direction infinite marquee */}
+      <div className="mt-8 space-y-3">
+        <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]">
+          <div className="flex shrink-0 animate-marquee gap-3 pr-3">
+            {[...marquee, ...marquee].map((item, i) => (
+              <span
+                key={i}
+                className="whitespace-nowrap rounded-full border border-border bg-card/40 px-3 py-1 text-xs text-muted-foreground backdrop-blur transition-colors hover:border-accent hover:text-accent"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]">
+          <div className="flex shrink-0 animate-marquee-reverse gap-3 pr-3">
+            {[...marquee.slice().reverse(), ...marquee.slice().reverse()].map((item, i) => (
+              <span
+                key={i}
+                className="whitespace-nowrap rounded-full border border-accent/25 bg-accent/5 px-3 py-1 text-xs text-muted-foreground backdrop-blur transition-colors hover:border-accent hover:text-accent"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

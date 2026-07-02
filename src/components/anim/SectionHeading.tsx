@@ -1,3 +1,4 @@
+import { m } from 'framer-motion';
 import { Reveal } from './Reveal';
 
 interface SectionHeadingProps {
@@ -23,9 +24,14 @@ export function SectionHeading({ eyebrow, title, subtitle, className = '' }: Sec
           <span className="text-gradient animate-text-gradient">{title}</span>
         </h2>
       </Reveal>
-      <Reveal delay={0.1}>
-        <div className="mt-3 h-1 w-20 rounded-full bg-gradient-to-r from-accent to-[hsl(var(--accent-2))]" />
-      </Reveal>
+      <m.div
+        initial={{ scaleX: 0, opacity: 0 }}
+        whileInView={{ scaleX: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.15, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        style={{ transformOrigin: 'left' }}
+        className="mt-3 h-1 w-20 rounded-full bg-gradient-to-r from-accent to-[hsl(var(--accent-2))]"
+      />
       {subtitle && (
         <Reveal delay={0.15}>
           <p className="mt-4 max-w-xl text-sm text-muted-foreground sm:text-base">{subtitle}</p>
