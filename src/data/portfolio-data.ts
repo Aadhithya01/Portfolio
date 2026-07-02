@@ -4,7 +4,6 @@ export const portfolioData = {
   tagline: "Turning complex business problems into scalable, production-grade AI systems.",
   avatarUrl: "https://placehold.co/128x128.png",
   avatarHint: "man portrait",
-  location: "Erode, India",
   phone: "+91 95145 82641",
   contact: {
     email: "aadhithyaraja180@gmail.com",
@@ -68,7 +67,6 @@ export const portfolioData = {
       role: "Junior AI Engineer",
       company: "SPAN Technology Services Private Ltd.",
       duration: "January 2024 – Present",
-      location: "Erode, India",
       highlights: [
         {
           title: "Architected an MCP-Powered Multi-Tool Assistant with Context-Aware Escalation",

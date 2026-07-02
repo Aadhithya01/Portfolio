@@ -2,7 +2,7 @@ import { m } from 'framer-motion';
 import { portfolioData } from '@/data/portfolio-data';
 import { SectionHeading } from '@/components/anim/SectionHeading';
 import { Reveal } from '@/components/anim/Reveal';
-import { Briefcase, MapPin, CalendarDays, Sparkles } from 'lucide-react';
+import { Briefcase, CalendarDays, Sparkles } from 'lucide-react';
 
 export function Experience() {
   const { experience } = portfolioData;
@@ -27,9 +27,6 @@ export function Experience() {
                   <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <CalendarDays className="h-3.5 w-3.5" /> {job.duration}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <MapPin className="h-3.5 w-3.5" /> {job.location}
                     </span>
                   </div>
                 </div>
