@@ -11,7 +11,7 @@ const marquee = portfolioData.skills.flatMap((s) => s.items);
 
 export function Skills() {
   return (
-    <section id="skills" className="relative py-24">
+    <section id="skills" className="relative py-16 md:py-20">
       <div className="container mx-auto px-4">
         <SectionHeading
           eyebrow="Toolbox"

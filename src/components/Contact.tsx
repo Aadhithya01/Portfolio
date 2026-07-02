@@ -31,7 +31,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24">
+    <section id="contact" className="relative py-16 md:py-20">
       <div className="container mx-auto px-4">
         <SectionHeading
           eyebrow="Say hello"

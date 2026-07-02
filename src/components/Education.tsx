@@ -7,11 +7,11 @@ export function Education() {
   const { education } = portfolioData;
 
   return (
-    <section id="education" className="relative py-24">
+    <section id="education" className="relative py-16 md:py-20">
       <div className="container mx-auto px-4">
         <SectionHeading eyebrow="Background" title="Education" />
 
-        <div className="mx-auto max-w-3xl space-y-6">
+        <div className="mx-auto max-w-4xl space-y-6">
           {education.map((edu) => (
             <Reveal key={edu.degree}>
               <div className="gradient-border rounded-2xl border border-border bg-card/60 p-6 backdrop-blur transition-shadow hover:shadow-xl hover:shadow-accent/10">

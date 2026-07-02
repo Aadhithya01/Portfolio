@@ -8,11 +8,11 @@ export function Experience() {
   const { experience } = portfolioData;
 
   return (
-    <section id="experience" className="relative py-24">
+    <section id="experience" className="relative py-16 md:py-20">
       <div className="container mx-auto px-4">
         <SectionHeading eyebrow="Career" title="Work Experience" />
 
-        <div className="relative mx-auto max-w-3xl">
+        <div className="relative mx-auto max-w-4xl">
           {/* Timeline spine */}
           <div className="absolute left-4 top-2 h-full w-px bg-border" />
           <motion.div

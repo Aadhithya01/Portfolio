@@ -10,11 +10,11 @@ export function Publications() {
   if (!publications || publications.length === 0) return null;
 
   return (
-    <section id="publications" className="relative py-24">
+    <section id="publications" className="relative py-16 md:py-20">
       <div className="container mx-auto px-4">
         <SectionHeading eyebrow="Writing" title="Publications" />
 
-        <RevealGroup className="mx-auto grid max-w-4xl grid-cols-1 gap-4 md:grid-cols-2">
+        <RevealGroup className="mx-auto grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
           {publications.map((pub) => (
             <motion.a
               key={pub.title}

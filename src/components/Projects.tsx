@@ -9,7 +9,7 @@ export function Projects() {
   const { projects } = portfolioData;
 
   return (
-    <section id="projects" className="relative py-24">
+    <section id="projects" className="relative py-16 md:py-20">
       <div className="container mx-auto px-4">
         <SectionHeading
           eyebrow="Selected Work"

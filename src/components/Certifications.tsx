@@ -6,11 +6,11 @@ import { BadgeCheck } from 'lucide-react';
 
 export function Certifications() {
   return (
-    <section id="certifications" className="relative py-24">
+    <section id="certifications" className="relative py-16 md:py-20">
       <div className="container mx-auto px-4">
         <SectionHeading eyebrow="Credentials" title="Certifications" />
 
-        <RevealGroup className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
+        <RevealGroup className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2">
           {portfolioData.certifications.map((cert) => (
             <motion.div
               key={cert.title}
