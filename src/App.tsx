@@ -23,7 +23,7 @@ export default function App() {
   const active = useActiveSection(SECTION_IDS);
 
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
       <MotionProvider>
         <AnimatedBackground />
         <SpotlightCursor />

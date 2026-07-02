@@ -38,7 +38,7 @@ export function Sidebar({ active }: SidebarProps) {
       >
         {/* Portrait */}
         <div className="relative mb-6">
-          <div className="absolute inset-0 -m-3 bg-gradient-to-tr from-accent/40 to-[hsl(var(--accent-2))]/40 blur-xl animate-blob-morph" />
+          <div className="absolute inset-0 -m-3 bg-gradient-to-tr from-accent/40 to-[hsl(var(--accent-2))]/40 opacity-60 blur-xl animate-blob-morph dark:opacity-100" />
           <div className="relative h-28 w-28 rounded-2xl p-[2px] sm:h-32 sm:w-32">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-accent via-[hsl(var(--accent-2))] to-accent animate-spin-slow" />
             <img
